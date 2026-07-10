@@ -44,12 +44,11 @@ vars:
    stage_name: GLUEDB.PUBLIC.GLUE_S3_STAGE
 
 models:
-  hamed_dbt_workshop:
-      example:
-          schema: example 
-     silver:
-          schema: silver
-          materialized: table
-      gold:
-          schema: gold
-          materialized: view
+  hamed_dbt_project:
+    silver:
+      +schema: silver
+      +materialized: table
+
+    gold:
+      +schema: gold
+      +materialized: view
