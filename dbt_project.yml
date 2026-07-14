@@ -10,15 +10,10 @@ config-version: 2
 profile: 'default'
 
 vars:
-
    wrk_schema: BRONZE
-
    file_format_csv: SCD2_DB.BRONZE.MY_CSV_FORMAT
-
    purge_status: FALSE
-
-   stage_name: SCD2_DB.BRONZE.s3_stage_test
-
+   stage_name: SCD2_DB.BRONZE.s3_stage_test/
    rawhist_db: SCD2_DB
 
 # These configurations specify where dbt should look for different types of files.
@@ -46,14 +41,6 @@ clean-targets:         # directories to be removed by `dbt clean`
 # instead be materialized as tables. Any models you add to the root of the models folder will 
 # continue to be built as views. These settings can be overridden in the individual model files
 # using the `{{ config(...) }}` macro.
-
-vars:
-
-   target_db: GLUEDB
-
-   target_schema: PUBLIC
-
-   stage_name: GLUEDB.PUBLIC.GLUE_S3_STAGE
 
 models:
   hamed_dbt_project:
