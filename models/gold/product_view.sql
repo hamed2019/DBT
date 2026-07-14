@@ -2,7 +2,9 @@
 
  "alias":'PRODUCT_VIEW',
 
- "schema": 'GOLD'
+ "schema": 'GOLD',
+  "database": 'PC_DBT_DB'
+
 
 })}}
 
